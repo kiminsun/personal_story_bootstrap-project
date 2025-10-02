@@ -1,0 +1,56 @@
+[
+  {
+    "category": "Frontend",
+    "icon": "fas fa-laptop-code",
+    "skills": [
+      { "name": "React.js", "level": 90 },
+      { "name": "Vue.js", "level": 85 },
+      { "name": "JavaScript (ES6+)", "level": 95 },
+      { "name": "TypeScript", "level": 80 },
+      { "name": "HTML5/CSS3", "level": 95 },
+      { "name": "Sass/SCSS", "level": 85 },
+      { "name": "Bootstrap", "level": 90 },
+      { "name": "Tailwind CSS", "level": 75 }
+    ]
+  },
+  {
+    "category": "Backend",
+    "icon": "fas fa-server",
+    "skills": [
+      { "name": "Node.js", "level": 88 },
+      { "name": "Express.js", "level": 85 },
+      { "name": "Python", "level": 80 },
+      { "name": "Django", "level": 75 },
+      { "name": "PHP", "level": 70 },
+      { "name": "GraphQL", "level": 75 },
+      { "name": "RESTful API", "level": 90 },
+      { "name": "JWT Authentication", "level": 85 }
+    ]
+  },
+  {
+    "category": "Database",
+    "icon": "fas fa-database",
+    "skills": [
+      { "name": "MySQL", "level": 85 },
+      { "name": "PostgreSQL", "level": 80 },
+      { "name": "MongoDB", "level": 75 },
+      { "name": "Redis", "level": 70 },
+      { "name": "Database Design", "level": 85 },
+      { "name": "Query Optimization", "level": 80 }
+    ]
+  },
+  {
+    "category": "DevOps & Tools",
+    "icon": "fas fa-tools",
+    "skills": [
+      { "name": "AWS", "level": 80 },
+      { "name": "Docker", "level": 85 },
+      { "name": "Git/GitHub", "level": 95 },
+      { "name": "CI/CD", "level": 80 },
+      { "name": "Linux", "level": 75 },
+      { "name": "Nginx", "level": 70 },
+      { "name": "Jenkins", "level": 65 },
+      { "name": "Kubernetes", "level": 60 }
+    ]
+  }
+]

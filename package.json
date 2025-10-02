@@ -1,0 +1,35 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "현대적이고 반응형인 개인 포트폴리오 웹사이트",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "dev": "npx http-server -p 8000 -c-1 -o",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified'",
+    "validate": "node scripts/validate-json.js",
+    "deploy": "echo 'Deploy via GitHub Actions'"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "personal",
+    "bootstrap",
+    "responsive",
+    "github-pages"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/personal-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/personal-portfolio",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

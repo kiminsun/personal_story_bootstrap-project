@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 포트폴리오 | Personal Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="개인 포트폴리오 웹사이트 - 경험, 스킬, 프로젝트를 소개합니다">
+    <meta name="keywords" content="포트폴리오, 개발자, 웹개발, 프로젝트">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="개인 포트폴리오">
+    <meta property="og:description" content="개인 포트폴리오 웹사이트 - 경험, 스킬, 프로젝트를 소개합니다">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="개인 포트폴리오">
+    <meta name="twitter:description" content="개인 포트폴리오 웹사이트 - 경험, 스킬, 프로젝트를 소개합니다">
+    <meta name="twitter:image" content="./assets/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="loading-text mt-3">포트폴리오를 불러오는 중...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home" id="logo">
+                <div class="logo-circle">S</div>
+            </a>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            
+            <!-- Admin Panel (Hidden by default) -->
+            <div class="admin-panel" id="adminPanel" style="display: none;">
+                <button class="btn btn-sm btn-outline-light" id="adminToggle">
+                    <i class="fas fa-cog"></i> 관리자
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">소개</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">경력</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">스킬</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">프로젝트</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#awards">수상/자격증</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">연락처</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop class="hero-video">
+            <source src="./assets/videos/background-video.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+            <div class="hero-fallback"></div>
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="hero-title" data-aos="fade-up">안녕하세요</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    창의적인 문제 해결과 혁신적인 기술로<br>
+                    더 나은 디지털 경험을 만들어갑니다
+                </p>
+                <a href="#about" class="btn btn-primary btn-lg hero-cta" data-aos="fade-up" data-aos-delay="400">
+                    더 알아보기 <i class="fas fa-arrow-down ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">소개</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3 class="about-name" id="aboutName">홍길동</h3>
+                        <p class="about-motto" id="aboutMotto">"코드로 세상을 더 나은 곳으로 만들어갑니다"</p>
+                        <p class="about-description" id="aboutDescription">
+                            5년 이상의 풀스택 개발 경험을 바탕으로 사용자 중심의 웹 애플리케이션을 개발하고 있습니다. 
+                            새로운 기술을 학습하고 적용하는 것을 즐기며, 팀과의 협업을 통해 더 나은 결과를 만들어내는 것을 중요하게 생각합니다.
+                        </p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span id="aboutEmail">your.email@example.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span id="aboutPhone">010-1234-5678</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span id="aboutLocation">서울, 대한민국</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="kpi-grid">
+                        <div class="kpi-item" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="kpi-number" id="kpiExperience">5+</div>
+                            <div class="kpi-label">년 경력</div>
+                        </div>
+                        <div class="kpi-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="kpi-number" id="kpiProjects">30+</div>
+                            <div class="kpi-label">완료 프로젝트</div>
+                        </div>
+                        <div class="kpi-item" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="kpi-number" id="kpiTeamSize">10+</div>
+                            <div class="kpi-label">팀 규모</div>
+                        </div>
+                        <div class="kpi-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="kpi-number" id="kpiClients">50+</div>
+                            <div class="kpi-label">만족한 고객</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">경력</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timeline" id="experienceTimeline">
+                        <!-- Experience items will be loaded from JSON -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">스킬</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row" id="skillsContainer">
+                <!-- Skills will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">프로젝트</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row" id="projectsContainer">
+                <!-- Projects will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">수상 및 자격증</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row" id="awardsContainer">
+                <!-- Awards will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title text-white" data-aos="fade-up">연락처</h2>
+                    <div class="section-divider" data-aos="fade-up" data-aos-delay="100"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-content text-center">
+                        <p class="contact-description" data-aos="fade-up">
+                            새로운 기회나 협업에 관심이 있으시다면 언제든 연락주세요!
+                        </p>
+                        <div class="contact-methods" data-aos="fade-up" data-aos-delay="200">
+                            <a href="mailto:your.email@example.com" class="contact-btn" id="emailBtn">
+                                <i class="fas fa-envelope"></i>
+                                이메일 보내기
+                            </a>
+                            <button class="contact-btn" id="copyEmailBtn">
+                                <i class="fas fa-copy"></i>
+                                이메일 복사
+                            </button>
+                            <a href="#" class="contact-btn" id="kakaoBtn">
+                                <i class="fas fa-comment"></i>
+                                카카오톡
+                            </a>
+                        </div>
+                        <div class="social-links" data-aos="fade-up" data-aos-delay="400">
+                            <a href="#" class="social-link" id="githubLink">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" id="linkedinLink">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link" id="websiteLink">
+                                <i class="fas fa-globe"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="projectModalTitle">프로젝트 제목</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="projectModalBody">
+                    <!-- Project details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Modal -->
+    <div class="modal fade" id="adminModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">관리자 패널</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs" id="adminTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#adminAbout">소개</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#adminExperience">경력</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#adminSkills">스킬</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#adminProjects">프로젝트</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#adminAwards">수상/자격증</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-3" id="adminTabContent">
+                        <!-- Admin forms will be loaded here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" id="exportDataBtn">
+                        <i class="fas fa-download"></i> JSON 내보내기
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom JavaScript -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
