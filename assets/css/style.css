@@ -48,6 +48,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* 네비게이션 바 높이만큼 오프셋 */
 }
 
 body {
@@ -932,6 +933,14 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
+}
+
+/* ===== 앵커 네임 태그 스타일 ===== */
+a[name] {
+    display: block;
+    position: relative;
+    top: -80px; /* 네비게이션 바 높이만큼 위로 이동 */
+    visibility: hidden;
 }
 
 /* ===== 유틸리티 클래스 ===== */
