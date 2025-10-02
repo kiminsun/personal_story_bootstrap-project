@@ -517,18 +517,41 @@ body {
 }
 
 .skill-bar {
-    height: 8px;
+    height: 10px;
     background: var(--bg-tertiary);
-    border-radius: 4px;
+    border-radius: 5px;
     overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .skill-progress {
     height: 100%;
     background: var(--gradient-primary);
     border-radius: 4px;
-    transition: width 1s ease;
+    transition: width 1.2s ease-out, opacity 0.3s ease;
     width: 0%;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(99, 102, 241, 0.3);
+}
+
+/* 스킬 바 글로우 효과 */
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
 
 /* ===== 프로젝트 섹션 ===== */

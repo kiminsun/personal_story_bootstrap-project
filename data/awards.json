@@ -1,58 +1,9 @@
-[
-  {
-    "title": "우수 개발자상",
-    "organization": "테크 이노베이션",
-    "period": "2023.12",
-    "description": "뛰어난 기술력과 팀워크로 회사 주요 프로젝트 성공에 기여하여 수상. 특히 성능 최적화 및 코드 품질 개선에 대한 공로를 인정받음.",
-    "icon": "fas fa-trophy"
-  },
+[  
   {
     "title": "정보처리기사",
     "organization": "한국산업인력공단",
-    "period": "2018.11",
+    "period": "1996.05",
     "description": "정보시스템의 생명주기 전반에 걸친 분석, 설계, 구현, 시험, 운영, 유지보수 등의 업무를 수행하는 자격증 취득.",
     "icon": "fas fa-certificate"
-  },
-  {
-    "title": "AWS Certified Solutions Architect",
-    "organization": "Amazon Web Services",
-    "period": "2022.08",
-    "description": "AWS 클라우드 환경에서 확장 가능하고 안전한 애플리케이션을 설계하고 배포하는 능력을 인증받음.",
-    "icon": "fab fa-aws"
-  },
-  {
-    "title": "해커톤 대상",
-    "organization": "서울 스타트업 위크",
-    "period": "2021.09",
-    "description": "48시간 해커톤에서 AI 기반 헬스케어 솔루션을 개발하여 대상 수상. 팀 리더로서 기술적 방향성을 제시하고 프로토타입 개발을 주도함.",
-    "icon": "fas fa-medal"
-  },
-  {
-    "title": "Google Analytics 인증",
-    "organization": "Google",
-    "period": "2020.05",
-    "description": "Google Analytics를 활용한 웹사이트 트래픽 분석 및 디지털 마케팅 성과 측정 능력을 인증받음.",
-    "icon": "fab fa-google"
-  },
-  {
-    "title": "오픈소스 기여상",
-    "organization": "한국 오픈소스 소프트웨어 협회",
-    "period": "2022.03",
-    "description": "React 생태계 오픈소스 프로젝트에 지속적인 기여를 통해 커뮤니티 발전에 공헌한 공로를 인정받음.",
-    "icon": "fab fa-github"
-  },
-  {
-    "title": "MongoDB Developer Certification",
-    "organization": "MongoDB Inc.",
-    "period": "2021.06",
-    "description": "MongoDB 데이터베이스 설계, 개발, 운영에 대한 전문 지식과 실무 능력을 인증받음.",
-    "icon": "fas fa-leaf"
-  },
-  {
-    "title": "Agile & Scrum Master 인증",
-    "organization": "Scrum Alliance",
-    "period": "2020.11",
-    "description": "애자일 방법론과 스크럼 프레임워크를 활용한 프로젝트 관리 및 팀 리딩 능력을 인증받음.",
-    "icon": "fas fa-users-cog"
-  }
+  }   
 ]

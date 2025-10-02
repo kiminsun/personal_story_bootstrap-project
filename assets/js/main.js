@@ -453,21 +453,45 @@ function setupSkillAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach(bar => {
+                skillBars.forEach((bar, index) => {
                     const percentage = bar.getAttribute('data-percentage');
+                    // 각 스킬 바마다 약간의 지연시간을 두어 순차적으로 애니메이션
                     setTimeout(() => {
                         bar.style.width = percentage + '%';
-                    }, 200);
+                        bar.style.opacity = '1';
+                    }, 300 + (index * 100));
                 });
+                // 한 번 애니메이션이 실행되면 관찰 중지
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
+    }, { 
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    });
     
     // 스킬 섹션 관찰
     const skillsSection = document.getElementById('skills');
     if (skillsSection) {
         observer.observe(skillsSection);
     }
+    
+    // 페이지 로드 시 스킬 섹션이 이미 보이는 경우를 위한 폴백
+    setTimeout(() => {
+        const skillsRect = skillsSection?.getBoundingClientRect();
+        if (skillsRect && skillsRect.top < window.innerHeight && skillsRect.bottom > 0) {
+            const skillBars = skillsSection.querySelectorAll('.skill-progress');
+            skillBars.forEach((bar, index) => {
+                const percentage = bar.getAttribute('data-percentage');
+                if (bar.style.width === '0%' || !bar.style.width) {
+                    setTimeout(() => {
+                        bar.style.width = percentage + '%';
+                        bar.style.opacity = '1';
+                    }, 500 + (index * 100));
+                }
+            });
+        }
+    }, 1500);
 }
 
 /**
@@ -557,7 +581,7 @@ function renderSkillsSection() {
                     <span class="skill-percentage">${skill.level}%</span>
                 </div>
                 <div class="skill-bar">
-                    <div class="skill-progress" data-percentage="${skill.level}"></div>
+                    <div class="skill-progress" data-percentage="${skill.level}" style="width: 0%; opacity: 0;"></div>
                 </div>
             </div>
         `).join('');
