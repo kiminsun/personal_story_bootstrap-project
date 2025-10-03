@@ -10,7 +10,7 @@
       { "name": "HTML5/CSS3", "level": 95 },
       { "name": "Sass/SCSS", "level": 85 },
       { "name": "Bootstrap", "level": 90 },
-      { "name": "Tailwind CSS", "level": 75 }
+      { "name": "XPLATFORM", "level": 75 }
     ]
   },
   {
@@ -18,22 +18,24 @@
     "icon": "fas fa-server",
     "skills": [
       { "name": "Node.js", "level": 88 },
-      { "name": "Express.js", "level": 85 },
+      { "name": "Java", "level": 95 },
+      { "name": "Spring FrameWork", "level": 95 },
+      { "name": "ASP.NET", "level": 95 },
       { "name": "Python", "level": 80 },
       { "name": "Django", "level": 75 },
-      { "name": "PHP", "level": 70 },
-      { "name": "GraphQL", "level": 75 },
-      { "name": "RESTful API", "level": 90 },
-      { "name": "JWT Authentication", "level": 85 }
+      { "name": "PHP", "level": 90 },
+      { "name": "ASP/JSP/JSP", "level": 95 },
+      { "name": "RESTful API", "level": 90 }   
     ]
   },
   {
     "category": "Database",
     "icon": "fas fa-database",
     "skills": [
-      { "name": "MySQL", "level": 85 },
+      { "name": "Oracle", "level": 85 },
       { "name": "PostgreSQL", "level": 80 },
-      { "name": "MongoDB", "level": 75 },
+      { "name": "MySQL", "level": 95 },
+      { "name": "MSSQL", "level": 95 },
       { "name": "Redis", "level": 70 },
       { "name": "Database Design", "level": 85 },
       { "name": "Query Optimization", "level": 80 }
@@ -43,14 +45,13 @@
     "category": "DevOps & Tools",
     "icon": "fas fa-tools",
     "skills": [
-      { "name": "AWS", "level": 80 },
-      { "name": "Docker", "level": 85 },
+      { "name": "AWS", "level": 80 },  
       { "name": "Git/GitHub", "level": 95 },
       { "name": "CI/CD", "level": 80 },
       { "name": "Linux", "level": 75 },
       { "name": "Nginx", "level": 70 },
       { "name": "Jenkins", "level": 65 },
-      { "name": "Kubernetes", "level": 60 }
+      { "name": "JEUS", "level": 80 }
     ]
   }
 ]

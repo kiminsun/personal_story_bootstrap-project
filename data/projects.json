@@ -1,78 +1,110 @@
 [
   {
-    "title": "E-Commerce 플랫폼",
-    "description": "React와 Node.js를 활용한 대규모 온라인 쇼핑몰 플랫폼 개발. 실시간 재고 관리, 결제 시스템, 관리자 대시보드 등 포함.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["React", "Node.js", "MongoDB", "AWS"],
-    "techStack": "React.js, Node.js, Express, MongoDB, AWS EC2/S3, Stripe API",
-    "contribution": "풀스택 개발 (프론트엔드 70%, 백엔드 80%)",
-    "results": "월 거래액 10억원 달성, 사용자 만족도 4.8/5.0, 페이지 로딩 속도 50% 개선",
+    "title": "삼성카드 노후 서버 교체 프로젝트",
+    "description": "삼성카드 노후 서버 교체 프로젝트 개발",
+    "image": "./assets/images/cloud.jpg",
+    "tags": ["UtoL", "Spring FrameWork","Pro*C", "Oracle", "삼성클라우드(SCP)"],
+    "techStack": "SpringFrameWork,Node.js, Bootstrap, Oracle, SCP",
+    "contribution": "on-premise에서 삼성 클라우드로 서버 교체 후 전체 테스트 (백엔드 100%)",
+    "results": "유연한 자원 할당, 비용 절감,  빠른 확장성 (고객 만족도 95%)",
     "links": {
-      "demo": "https://demo-ecommerce.example.com",
-      "github": "https://github.com/username/ecommerce-platform"
+      "demo": "http://etms.samsungcard.com/"      
     }
   },
   {
-    "title": "실시간 채팅 애플리케이션",
-    "description": "Socket.io를 활용한 실시간 메시징 플랫폼. 그룹 채팅, 파일 공유, 화상 통화 기능 지원.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["Vue.js", "Socket.io", "WebRTC", "Redis"],
-    "techStack": "Vue.js, Socket.io, Node.js, Redis, WebRTC, PostgreSQL",
-    "contribution": "프론트엔드 개발 리드 및 실시간 통신 구현",
-    "results": "동시 접속자 5,000명 지원, 메시지 전송 지연시간 50ms 이하 달성",
+    "title": "BC사-DGB 지역화폐 카드 개발",
+    "description": "BC사-DGB 경상도 지역 화폐카드 상품 개발",
+    "image": "./assets/images/BCDGB.jpg",
+    "tags": ["JexFrameWork", "Socket.io", "Spring boot", "Java Batch", "Bootstrap"],
+    "techStack": "JexFrameWork, Socket.io, Redis, Bootstrap, Oracle",
+    "contribution": "BC사-DGB FEP,정보계 실시간 전문 통신 개발,DGB 비대면 은행 웹채널시스템 공통 부분 개발",
+    "results": "DGB 지역화폐카드 - 포항 지역 소상공인 지원,지역 발전 활성화 (고객 만족도 95%)",
     "links": {
-      "demo": "https://chat-app.example.com",
-      "github": "https://github.com/username/realtime-chat"
+      "demo": "https://www.imbank.co.kr/dgb_ebz_main.jsp" 
     }
   },
   {
-    "title": "데이터 시각화 대시보드",
-    "description": "D3.js와 Chart.js를 활용한 비즈니스 인텔리전스 대시보드. 실시간 데이터 분석 및 시각화 제공.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["React", "D3.js", "Python", "FastAPI"],
-    "techStack": "React.js, D3.js, Chart.js, Python, FastAPI, PostgreSQL",
-    "contribution": "데이터 시각화 전문 개발 및 API 설계",
-    "results": "데이터 처리 속도 300% 향상, 사용자 의사결정 시간 40% 단축",
+    "title": "LG에너지솔루션 - 프로젝트포탈시스템 분리",
+    "description": "LG에너지솔루션 업무혁신 프로젝트포탈 분리 프로젝트 PM",
+    "image": "./assets/images/LG.jpg",
+    "tags": ["RestAPI", "Java", "DevOn Framework(배치)", "Spring boot","Oracle","스마트오케스트라 솔루션"],
+    "techStack": "RestAPI, Java, Spring boot, Oracle,PostgreSQL",
+    "contribution": "LG-CNS 스마트오케스트라 솔루션 분석,개발 및 테스트",
+    "results": "LG화학,LG엔솔 통합시스템에서 LG엔솔 시스템으로 분리 작업 ( 고객 만족도 99% )",
     "links": {
-      "demo": "https://dashboard.example.com",
-      "github": "https://github.com/username/data-dashboard"
+      "demo": "https://www.lgensol.com/kr/index"    
     }
   },
   {
-    "title": "모바일 앱 백엔드 API",
-    "description": "React Native 앱을 위한 RESTful API 서버. 사용자 인증, 푸시 알림, 데이터 동기화 기능 구현.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["Node.js", "Express", "JWT", "Firebase"],
-    "techStack": "Node.js, Express.js, JWT, Firebase, MySQL, Docker",
-    "contribution": "백엔드 아키텍처 설계 및 전체 API 개발",
-    "results": "API 응답 시간 평균 200ms, 99.9% 가용성 달성, MAU 50,000명 지원",
+    "title": "국회출입기자 시스템 고도화",
+    "description": "국회 출입기자 관련 출입증발급,관리자 모드 설계 및 개발",
+    "image": "./assets/images/nation.jpg",
+    "tags": ["EgovFrameWork", "RestAPI", "Oracle", "Bootstrap"],
+    "techStack": "EgovFrameWork,RestAPI,Oracle,Bootstrap",
+    "contribution": "국회 출입기자 관련 출입증발급,인쇄,주차증발급,SMS/MMS 발송,관리자 모드 설계 및 개발",
+    "results": "국회 출입기자 시스템 고도화개발로 기자증 출력 및 관리 편리성 도모 (고객 만족도 95% )",
     "links": {
-      "github": "https://github.com/username/mobile-api"
+      "demo": "https://www.assembly.go.kr/"
     }
   },
   {
-    "title": "블록체인 투표 시스템",
-    "description": "Ethereum 블록체인을 활용한 투명하고 안전한 온라인 투표 시스템. 스마트 컨트랙트 기반 투표 검증.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["Solidity", "Web3.js", "React", "Ethereum"],
-    "techStack": "Solidity, Web3.js, React.js, Truffle, Ganache, MetaMask",
-    "contribution": "스마트 컨트랙트 개발 및 프론트엔드 Web3 연동",
-    "results": "투표 결과 위변조 방지 100% 달성, 투표 참여율 85% 증가",
+    "title": "레포샵 온라인 쇼핑몰 고도화",
+    "description": "스킨스쿠버 다이버 관련 온라인 쇼핑몰 사이트 개발",
+    "image": "./assets/images/repo.png",
+    "tags": ["PHP", "Mysql", "WtoL", "그누보드쇼핑몰"],
+    "techStack": "PHP, Mysql, RestAPI, WtoL, 그누보드쇼핑몰",
+    "contribution": "mssql에서 mysql로 데이터 컨버젼 및 이관,asp에서 php로 개발",
+    "results": "서버이전으로 인한 유지보수 절감 및 성능 고도화 ( 고객만족도 80% )",
     "links": {
-      "demo": "https://blockchain-voting.example.com",
-      "github": "https://github.com/username/blockchain-voting"
+      "demo": "https://www.leposhop.com/shop/index.php"      
     }
   },
   {
-    "title": "AI 기반 추천 시스템",
-    "description": "머신러닝을 활용한 개인화 상품 추천 시스템. 사용자 행동 분석 및 협업 필터링 알고리즘 적용.",
-    "image": "./assets/images/placeholder.svg",
-    "tags": ["Python", "TensorFlow", "Django", "ML"],
-    "techStack": "Python, TensorFlow, Django, Pandas, NumPy, PostgreSQL",
-    "contribution": "머신러닝 모델 개발 및 Django 백엔드 구현",
-    "results": "추천 정확도 78% 달성, 사용자 구매 전환율 25% 증가",
+    "title": "한국에너지공단 - 집단에너지시스템 개발",
+    "description": "한국에너지공단 - 집단에너지시스템 개발 총괄",
+    "image": "./assets/images/enery.png",
+    "tags": ["PHP", "Oracle", "Bootstrap", "RestAPI"],
+    "techStack": "PHP,Oracle,Bootstrap,RestAPI",
+    "contribution": "FO 메인사이트,PO 사업자서비스/안전진단/회계서비스,BO 관리자사이트 개발",
+    "results": "FO,PO,BO 사이트 개발 ( 고객만족도 50% )",
     "links": {
-      "github": "https://github.com/username/ai-recommendation"
+      "demo": "https://www.energy.or.kr/"
+    }
+  },
+  {
+    "title": "강안교육 - 학원 온라인 시스템 개발",
+    "description": "재수학원 온라인 시스템 개발",
+    "image": "./assets/images/kangan.jpg",
+    "tags": ["PHP", "Mysql", "WebRTC","Bootstrap", "RestAPI"],
+    "techStack": "PHP,Mysql,WebRTC,Bootstrap,RestAPI",
+    "contribution": "재수학원 온라인 시스템,온라인스쿨 부모앱,리브101,전국레테 개발",
+    "results": " 학생,학부모,강사,학원관리자를 위한 내부시스템 개발로 인한 편리성 도모 ( 고객만족도 85% )",
+    "links": {
+      "demo": "https://www.kanganedu.net/"
+    }
+  },
+  {
+    "title": "유레카 - 병원 시스템 개발",
+    "description": "다수의 의료기관 사이트 개발 및 운영",
+    "image": "./assets/images/hospital.png",
+    "tags": ["PHP", "Mysql", "Spring boot","Bootstrap", "RestAPI"],
+    "techStack": "PHP,Mysql,Spring boot,Bootstrap,RestAPI",
+    "contribution": "roothair.kr,sarangi.co.kr,uniqueps.co.kr등등 의료기관 사이트 개발 및 운영",
+    "results": "사이트 운영 비용 절감 및 병원 홍보/예약 편리성 도모 ( 고객만족도 95% )",
+    "links": {
+      "demo": "http://www.eurekanet.co.kr/"
+    }
+  },
+  {
+    "title": "삼성카드 - 인트라넷 시스템 개발,운영(SM)",
+    "description": "다수의 의료기관 사이트 개발 및 운영",
+    "image": "./assets/images/samsungcard.png",
+    "tags": ["ASP.NET", "MSSQL","JAVA","Spring FrameWork","AnyFrameWork","xplatform","Bootstrap", "RestAPI"],
+    "techStack": "ASP.NET,MSSQL,JAVA,Spring FrameWork,AnyFrame,xplatform,Bootstrap,RestAPI",
+    "contribution": "인사팀,홍보팀,총무팀,감사팀,경영정보팀 사내인트라넷시스템 개발 및 운영",
+    "results": "사내의 소통과 협업, 정보 관리 ( 고객만족도 95% )",
+    "links": {
+      "demo": "https://www.samsungcard.com/"
     }
   }
 ]

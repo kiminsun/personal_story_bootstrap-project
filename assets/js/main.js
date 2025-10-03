@@ -45,6 +45,11 @@ async function initializePortfolio() {
             offset: 100
         });
         
+        // 모바일에서 스킬 바 강제 애니메이션 (추가 보장)
+        setTimeout(() => {
+            forceMobileSkillAnimation();
+        }, 2000);
+        
         // 로딩 화면 숨김
         hideLoadingScreen();
         
@@ -446,52 +451,121 @@ function setupSmoothScroll() {
 }
 
 /**
- * 스킬 애니메이션 설정
+ * 스킬 애니메이션 설정 (모바일 호환성 개선)
  */
 function setupSkillAnimations() {
+    const skillsSection = document.getElementById('skills');
+    if (!skillsSection) return;
+    
+    // 모바일 디바이스 감지
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                     window.innerWidth <= 768;
+    
+    // 스킬 바 애니메이션 실행 함수
+    function animateSkillBars() {
+        const skillBars = skillsSection.querySelectorAll('.skill-progress');
+        skillBars.forEach((bar, index) => {
+            const percentage = bar.getAttribute('data-percentage');
+            if (bar.style.width === '0%' || !bar.style.width || bar.style.opacity === '0') {
+                setTimeout(() => {
+                    bar.style.width = percentage + '%';
+                    bar.style.opacity = '1';
+                }, isMobile ? 100 + (index * 50) : 300 + (index * 100));
+            }
+        });
+    }
+    
+    // 모바일에서는 더 관대한 설정으로 IntersectionObserver 설정
+    const observerOptions = isMobile ? {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20px 0px'
+    } : {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach((bar, index) => {
-                    const percentage = bar.getAttribute('data-percentage');
-                    // 각 스킬 바마다 약간의 지연시간을 두어 순차적으로 애니메이션
-                    setTimeout(() => {
-                        bar.style.width = percentage + '%';
-                        bar.style.opacity = '1';
-                    }, 300 + (index * 100));
-                });
+                animateSkillBars();
                 // 한 번 애니메이션이 실행되면 관찰 중지
                 observer.unobserve(entry.target);
             }
         });
-    }, { 
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
-    });
+    }, observerOptions);
     
-    // 스킬 섹션 관찰
-    const skillsSection = document.getElementById('skills');
-    if (skillsSection) {
-        observer.observe(skillsSection);
-    }
+    // 스킬 섹션 관찰 시작
+    observer.observe(skillsSection);
     
-    // 페이지 로드 시 스킬 섹션이 이미 보이는 경우를 위한 폴백
+    // 모바일에서 더 빠른 폴백 로직
+    const fallbackDelay = isMobile ? 800 : 1500;
     setTimeout(() => {
-        const skillsRect = skillsSection?.getBoundingClientRect();
-        if (skillsRect && skillsRect.top < window.innerHeight && skillsRect.bottom > 0) {
+        const skillsRect = skillsSection.getBoundingClientRect();
+        const isVisible = skillsRect.top < window.innerHeight && skillsRect.bottom > 0;
+        
+        if (isVisible) {
+            const skillBars = skillsSection.querySelectorAll('.skill-progress');
+            let needsAnimation = false;
+            
+            skillBars.forEach(bar => {
+                if (bar.style.width === '0%' || !bar.style.width || bar.style.opacity === '0') {
+                    needsAnimation = true;
+                }
+            });
+            
+            if (needsAnimation) {
+                animateSkillBars();
+            }
+        }
+    }, fallbackDelay);
+    
+    // 모바일에서 스크롤 이벤트 추가 폴백
+    if (isMobile) {
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const skillsRect = skillsSection.getBoundingClientRect();
+                const isVisible = skillsRect.top < window.innerHeight && skillsRect.bottom > 0;
+                
+                if (isVisible) {
+                    const skillBars = skillsSection.querySelectorAll('.skill-progress');
+                    skillBars.forEach(bar => {
+                        if (bar.style.width === '0%' || !bar.style.width || bar.style.opacity === '0') {
+                            const percentage = bar.getAttribute('data-percentage');
+                            bar.style.width = percentage + '%';
+                            bar.style.opacity = '1';
+                        }
+                    });
+                }
+            }, 100);
+        });
+    }
+}
+
+/**
+ * 모바일에서 스킬 바 강제 애니메이션 (추가 보장)
+ */
+function forceMobileSkillAnimation() {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || 
+                     window.innerWidth <= 768;
+    
+    if (isMobile) {
+        const skillsSection = document.getElementById('skills');
+        if (skillsSection) {
             const skillBars = skillsSection.querySelectorAll('.skill-progress');
             skillBars.forEach((bar, index) => {
                 const percentage = bar.getAttribute('data-percentage');
-                if (bar.style.width === '0%' || !bar.style.width) {
+                if (bar.style.width === '0%' || !bar.style.width || bar.style.opacity === '0') {
                     setTimeout(() => {
                         bar.style.width = percentage + '%';
                         bar.style.opacity = '1';
-                    }, 500 + (index * 100));
+                        console.log(`모바일 스킬 바 강제 애니메이션: ${percentage}%`);
+                    }, index * 200);
                 }
             });
         }
-    }, 1500);
+    }
 }
 
 /**
